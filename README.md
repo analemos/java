@@ -1,1 +1,31 @@
 # java
+
+INTERFACES
+
+São contratos que declaram o comportamento de outras classes.
+Podem ser compostas por constantes e métodos abstratos, defaults ou estáticos.
+As interfaces contam apenas com a assinatura do método (exceto métodos defatult).
+Cada classe que implementa uma interface, deve obrigatoriamente possuir os métodos por ela definidos.
+
+As interfaces são públicas (acessíveis a qualquer classe de qualquer pacote).
+Quando não especificado:
+    Constantes: públicas, estáticas e finais
+    Métodos: públicos e abstratos
+    
+Uma interface define um comportamento esperado, que pode ser implementado de diferentes maneiras por outras classes.
+A vantagem em se utilizar interfaces, é que esses comportamentos são conhecidos, mas sua implementação não.
+Dessa maneira, cada classe possui liberdade para implementar os métodos obrigatórios, sem a necessidade de conhecer implementações alheis.
+
+Exemplo:
+    Interface para calcular se um objeto é maior que outro.
+    
+    > public int isLargerThan(Relatable other);
+    
+    Essa comparação pode ser feita tanto para número de páginas de livros, quanto para área de duas casas.
+    A assinatura do método seria a mesma para ambos os casos, porém, cada classe teria a liberdade de implementar conforme suas necessidades/particularidades
+
+* Métodos abstratos: declarado, mas não implementado. Se uma classe inclui um método abstrato, então esta também deverá ser abstrata (exceto interfaces).
+* Métodos default: são implementados em interfaces e servem para atualizar uma interface sem quebrar as classes que a implementam. Contudo, estes podem ser redefinidos (overriding) ou redeclarados (tornando-os estes abstratos).
+* Métodos estáticos: 
+    
+    
